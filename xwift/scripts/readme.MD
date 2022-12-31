@@ -1,2 +1,4 @@
 # Scripts
-* All zip files are encrypted with a 10+ length password and is for my own references. Please do not attempt to decrypt it.
+You can place your scripts directly in this directory or place them into sub-folders.
+Note that currently we only support one folder deep (e.g. `scripts/foo/script.py`) auto reload.
+That is, just don't do something like `scripts/foo/bar/script.py` and you are all good.  

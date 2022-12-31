@@ -130,10 +130,11 @@ def reinstall_scripts_from_repo(repository_path):
 
 
 def reload_from_playground(repository_path):
-    # Set MayaCharm Port
-    if not cmds.commandPort(':4434', q=True):
-        cmds.commandPort(n=':4434')
+    if repository_path != "" and repository_path is not None:
+        # Set MayaCharm Port
+        if not cmds.commandPort(':4434', q=True):
+            cmds.commandPort(n=':4434')
 
-    reinstall_scripts_from_repo(repository_path)
-    reload_shelf()
-    logging.info("Successfully reloaded Xwift from playground.")
+        reinstall_scripts_from_repo(repository_path)
+        reload_shelf()
+        logging.info("Successfully reloaded Xwift from playground.")

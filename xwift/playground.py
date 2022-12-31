@@ -1,18 +1,17 @@
-# Only run this outside of Maya. Used to get REPO_PATH
-# import os
-# print(os.path.abspath(os.getcwd()).replace("\\", "/"))
-
-# Reload Utility
 import reload_util
-import maya.cmds as cmds
 
-# Reload Codebase
-REPO_PATH = "C:/Users/hongj/PycharmProjects/Xwift/xwift/"
+"""Uncomment the below and run for the first time to get REPO_PATH."""
+# def get_repo_path():
+#     """Used to get REPO_PATH. Only run this in PyCharm outside of Maya. """
+#     import os
+#     print(os.path.abspath(os.getcwd()).replace("\\", "/"))
+# get_repo_path()  
+
+REPO_PATH = ""  # e.g. "C:/Users/hongj/PycharmProjects/Xwift/xwift/"
 reload_util.reload_from_playground(REPO_PATH)
 
 
-
-# Run code
+# =============== Run your code below =============
 from con_library import library_ui
 
 ui = library_ui.showUI()

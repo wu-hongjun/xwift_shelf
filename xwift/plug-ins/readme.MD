@@ -1,9 +1,8 @@
 # Plug-Ins
+You can put your plug-ins in this directory for them to be automatically loaded.
  
-## BluePencil 2 
-* Windows: Maya 2022 - V2.5.4
-* macOS: Myaya 2022 - V2.5.4
-
-## CharcoalEditor 2
-* Windows: Maya 2022 - V2.6.1
-* macOS: Myaya 2022 - V2.6.1
+Things that can live here for example is:
+AnimSchoolPicker.mll  (For Win)
+AnimSchoolPicker.bundle  (For macOS)
+CharcoalEditor2.mll
+CharcoalEditor2.bundle
