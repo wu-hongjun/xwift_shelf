@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Xwift - Automatic Maya Toolkit Development Pipeline</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+      <link rel="stylesheet" href="scribbler-landing.css">
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="./doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a></li>
+        <li class="menu__item"><a href="https://github.com/wu-hongjun/heiya" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Xwift Shelf</h1>
+      <p class="hero__description">Automatic Maya Python toolkit development pipeline.</p>
+    </div>
+    <div class="hero__terminal">
+      <pre>
+        <!-- Place your demo code here -->
+        <code class="shell-session demo">playground.py >>> </code>
+      </pre>
+    </div>
+    <div class="wrapper">
+      <div class="callout">
+        <p>You get a flexible Python 3 Shelf, an automatic script deployment and reload mechanism, and an asset manager as a bonus.<br>
+          Xwift Shelf is the backbone technology I developed for Xwift toolkits to enable express and automatic script and shelf deployment.<br>
+          </p>
+        <a href="https://github.com/wu-hongjun/xwift_shelf/archive/refs/heads/main.zip" class="button--primary">Download</a>
+      </div>
+      <div class="keybinding">
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Traditional Maya</h3>
+          <li>Write raw code in Script Manager with no aid.</li>
+          <li>Save all scripts in the very hard to find Maya <code>/scripts</code> path.</li>
+          <li>Manually reload every time you make a change in code.</li>
+          <li>E-mail your script to artist and hope they know how to install.</li>
+          <li>One shelf button can only do one thing.</li>
+          <li>ALl the scripts you ever wrote are scattered everywhere.</li>
+        </ul>
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Life With Xwift</h3>
+          <li>Develop in PyCharm with all the IDE benefits.</li>
+          <li>Manage and store all of your tools using Git repository.</li>
+          <li>Automatic codebase reload for every execution.</li>
+          <li>One click to deploy all the scripts and shelf into Maya.</li>
+          <li>You can fit as many tools into a button as you wish.</li>
+          <li>All tools are organized in one shelf with clean hierarchy.</li>
+        </ul>
+      </div>
+      <div class="installation">
+        <h3 class="section__title">Installation</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="win">Windows</li>
+            <!-- <li class="tab" data-tab="linux">linux</li> -->
+            <li class="tab" data-tab="mac">macOS</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active win">
+              For first time users, simply run deploy_xwift.py from Pycharm.<br>
+              Please read the documentation for details and next steps.
+            </code>
+            <!-- <code class="tab__pane linux">$  apt-get install scribbler</code> -->
+            <code class="tab__pane mac">
+              For first time users, simply run deploy_xwift.py from Pycharm.<br>
+              Note: Some experimental work has been done on macOS support but never fully tested.
+            </code>
+          </pre>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature__item">
+          <h3 class="section__title">Powerful Shelf</h3>
+          <p>Xwift Shelf is a flexible Maya shelf written in Python 3 with sub-list and icon support.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Automatic Reload</h3>
+          <p>Xwift will automatically deploy and refresh the codebase in background each time you run code.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Complex Tool Support</h3>
+          <p>Xwift can handle large and complex toolkit deployment with ease.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Fully Customizable</h3>
+          <p>Xwift Shelf is fully customizable and open source, so you can hack it to how you want it to be.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Easy Deployment</h3>
+          <p>Xwift Shelf is super easy to deploy and setup, making tool transfer a breeze. </p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">It's Free!</h3>
+          <p>I love making people's lives easier! Happy people makes a better world.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>Read the documentation for setup, advanced usage, and customization.</p>
+        <a href="doc.html" class="button--primary">Documentation</a>
+      </div>
+    </div>
+    <div class="changelog">
+      <div class="wrapper">
+        <h3 class="section__title">Changelog</h3>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">v1.0.0</h4>
+            <small class="changelog__date">01/01/2023</small>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Initial release.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__callout">
+          <a href="https://github.com/wu-hongjun/heiya/blob/main/HISTORY.md" class="button--secondary">Checkout Full Log</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">© Copyright <a href="https://hongjunwu.com" target="_blank" class="link link--light">Hongjun Wu</a>, all rights reserved, 2022.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>

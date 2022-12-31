@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xwift Shelf Documentation - Auto Maya Dev Pipeline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="scribbler-global.css">
+    <link rel="stylesheet" href="scribbler-doc.css">
+    <link rel="author" href="http://hongjunwu.com">
+  </head>
+  <body>
+    <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">Xwift <span class="logo__thin">Doc</span></h1>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="https://github.com/wu-hongjun/xwift_shelf" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn selected">Introduction</li>
+          <li class="js-btn">Get Started</li>
+          <li class="js-btn">Advanced Usage</li>
+          <li class="js-btn">Heiya Functions</li>
+          <li class="js-btn">To-Do</li>
+          <li class="js-btn">License</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h1 class="section__title">Chapter 1: Introduction</h1>
+          <p>The guy who led me into the craft of tech art once said: "One does not seek tech art for a career, tech art selects its followers." That is, Technical Art is very much like witchcraft, everyone finds their own way here, mostly by searching and a lot of trial & error.</p>
+          <p>Developing scripts for Maya is equally confusing and complicated, there is no good way to learn it, few teach it in college, and it is just painful to write code for Maya.</p>
+          <h2>1.1 - (Optional but strongly recommended) Install Anaconda</h2>
+          <p>Note: If you already have python, jupyter_notebook, and pyperclip installed on your computer, feel free to skip this section.</p>
+          <p>In order to use it more easily, you might want to <strong>optionally</strong> install <code>jupyter_notebook</code>.</p>
+          <p>Configuring <code>python</code> and <code>jupyter_notebook</code> might be a daunting task for those who are not familiar with using Python.
+            Therefore, it would be much better if there is something that just takes care of everything automatically and not having to mess around with the code. 
+            That is what Anaconda does.  
+          </p>
+          <strong>For the majority of people, you will want to just install Anaconda from their <a href="https://www.anaconda.com/">Official Website (Link)</a>.</strong>
+          <p>
+            Note I have no affiliation with Anaconda, it just makes setup and install python prerequisites much easier. 
+            After you have Anaconda installed on your computer, it should already configured pip, jupyter_notebook, and python for you, and if you don't know what I am talking about, don't worry about it and just restart your computer.
+          </p>
+          <p>Of course, if you are familiar with python configuration, you can do it on your own, Anaconda is optional.</p>
+
+            <h2>1.2 - Install Heiya (Mandatory)</h2>
+            <p>Installation of Heiya should be fairly straight forward if you did the previous section or already have everything setup.</p>
+            <p>Note: <strong>If you used Anaconda</strong>, run the following in <strong>Anaconda Prompt</strong> (Help in 1.2.2):</p>
+            <div class="code__block code__block--notabs">
+              <pre class="code code--block">
+                <code>
+                  conda activate base
+                </code>
+              </pre>
+            </div>
+            <div class="code__block code__block--notabs">
+              <pre class="code code--block">
+                <code>
+                  pip install heiya
+                </code>
+              </pre>
+            </div>
+            <p>Once finished, it should look something like below.</p>
+            <img src="./img/anaconda_prompt_finished.png" width="100%" height="100%">
+            <p>If you <strong>configured on your own</strong>, simply run the following command in <strong>Terminal with administrator privileges</strong> (Help in 1.2.1).</p>
+            <div class="code__block code__block--notabs">
+              <pre class="code code--block">
+                <code>
+                  pip install heiya
+                </code>
+              </pre>
+            </div>
+            <h4>1.2.1 - Troubleshooting</h4>
+              <p>If you encounter some error code, most likely one of two things is going wrong:</p>
+              <li>1. You don't have pip installed on your computer. To solve this, run the following command to install pip.
+                <div class="code__block code__block--notabs">
+                  <pre class="code code--block">
+                    <code>
+                    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+                    python get-pip.py
+                    </code>
+                  </pre>
+                </div>
+            </li>
+            <li>
+              2. You don't have the Admin permission to run the commands. You are most likely going to see something like: 
+                <div class="code__block code__block--notabs">
+                  <pre class="code code--block">
+                    <code>
+                      ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: 'c:\\python310\\scripts\\pip.exe'
+                    </code>
+                  </pre>
+                </div>
+                Just make sure you are running Terminal using Administrator privilidges.
+            </li>
+            <h3>1.2.2 - How to run Terminal with administrator priviledges?</h3>
+            <h4>macOS</h4>
+            <p>On macOS, it is pretty straight forward. Open Launchpad and search for "Terminal", and open that app.</p>
+            <p>Type in the above command, and press enter. Terminal will prompt you to enter the password of your computer, just do it and it is complete.</p>
+            <h4>Windows</h4>
+            <p>On Windows 11, there are many ways to run Terminal (Or Powershell/Command Prompt if you are on Windows 10 or below, it is the same thing).</p>
+            <p>Simply right click the Windows icon on the bottom left of your screen, and press the option to <strong>Run Terminal (or Powershell) as Admin</strong>.</p>
+            <h3>1.2.2 - How to open Anaconda Prompt?</h3>
+            <p>
+              Open Anaconda Navigator, look for something that says "Anaconda Prompt/Powershell Prompt/CMD.exe Prompt". 
+              Basically, anything with the name "Prompt" will probably do.
+            </p>
+            <p>Press "Launch".</p>
+            <img src="./img/anaconda_prompt.png" width="100%" height="100%">
+        </li>
+        </section>
+
+        <section class="js-section">
+          <h1 class="section__title">Chapter 2: Get Started</h1>
+          <p>
+            For the most common usage, assuming you are a photographer that has some JPGs (either you shoot JPG or export from Lightroom as JPG), 
+            and you want to convert them to HEIF or AVIF so you can import them into your iCloud/Google Photos so these photos take very little storage. 
+            Here's how to quickly get yourself started.
+          </p>
+          <p>
+            Note: This looks long because is a babysit tutorial that covers in great detail. Once you get it, it is brainless to run.
+          </p>
+          <h2>2.1 - Open Jupyter Notebook</h2>
+          <p>
+            First, open Anaconda Navigator App on your computer (Assuming you already have it installed), and open "Jupyter Notebook" inside the app.
+            If you did not do the optional stuff, I assume you know what you are doing and just open a Jupyter Notebook page.
+          </p>
+          <p>
+            A webpage should open. 
+            Navigate to a place where you want to save this tool, and click "New - Notebook Python 3" on the top right of the Jupyter Notebook web page.  
+          </p>
+          <img src="./img/make_new_jupyter_notebook.png" width="100%" height="100%">
+          <p>
+            A new webpage that looks something like this should appear. First click "Untitled" to name it to something you like, for example, "jpg_hei".
+            In the below right after "In [  ]: 1" is the place where you can enter some code.
+          </p>
+          <img src="./img/new_jupyter_notebook.png" width="100%" height="100%">
+          <h2>2.2 - Make the Tool</h2>
+          <p>
+            Copy all the code and paste them into your newly created notebook. This code is also available on Github in <a href="https://github.com/wu-hongjun/heiya/blob/main/jpg_hei.ipynb">jpg_hei.ipynb (Link)</a>. 
+          </p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code class="language-python">
+                """
+                JPG to HEIF/AVIF
+                Convert JPG shoot by camera to High Efficiency Images with metadata to import to iCloud photo library.
+
+                import heiya
+                import pyperclip as clip
+
+                # Custom file path override, usually just leave it blank if you use pyperclip
+                source_dir = ""
+
+                # Get the image location directly from the clipboard
+                if source_dir == "":
+                    source_dir = clip.paste()
+                    
+                # This will convert all the JPG in source_dir to HEI.
+                # source_format = 0 -> JPG. (You don't need to change this for most of the time, you can also set to 1 for PNG.)
+                # target_format = 0 -> AVIF (For smaller file size but less compatible, requires iOS 16/macOS Ventura or higher).
+                # target_format = 1 -> HEIF (For best compatibility but slightly larger file size, requires additional extension to open on Windows).
+                heiya.to_hei.convert_image_in_dir_to_hei(source_dir, source_format=0, target_format=1)
+              </code>
+            </pre>
+          </div>
+          <p>Your notebook should already be saved, if not, do a quick "File - Save As" on the Notebook tool bar to make sure your notebook is created.</p>
+          <h2>2.3 - Run the Code</h2>
+          <p>Now, use Finder(macOS)/File Explorer(Windows) to go to the place where you store all of the JPGs you desire to convert.</p>
+          
+          <h3>2.3.1 - Copy the directory address.</h3>
+          <p>Copy the directory address to your clipboard.</p>
+          <li>
+            Windows: File Explorer -> Go to your target folder -> Single Click address bar -> Copy the file path in address bar.
+          </li>
+          <li>
+            macOS: Finder -> Go to your target folder -> Hold Alt (File path should apper in bottom left) -> Right click on folder and copy file path.
+          </li>
+          <p>
+            At this point, you might have something similar to this example stored in your clipboard. 
+            This is a SD card from a Fujifilm camera, your address might vary depending on where your photos are.
+          </p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                D:\DCIM\207_FUJI  (Windows)
+                /Volumes/SDXC/DCIM/207_FUJI  (macOS)
+              </code>
+            </pre>
+          </div>
+
+          <p>Now, you can do one of two things:</p>
+          <li>
+            If you just want to use the directory in your clipboard, do nothing.
+          </li>
+          <li>
+            If you wish to enter a custom path, paste the address into <code>source_dir</code>.
+          </li>
+          
+          <h3>2.3.2 -  Run the code.</h3>
+          <p>Make sure to select the cell by single clicking the code.</p>
+          <p>Navigate to your tool bar, and "Cells - Run Cells" to run the newly copied code. </p>
+          <p>Additionally, you can use <strong>Shift + Enter</strong> on your keyboard to make this operation faster.</p>
+          <p>Heiya should automatically start to convert the JPGs, and will print the progress down below.</p>
+          <img src="./img/pyperclip_convert_finished.png" width="100%" height="100%">
+          <p>Horray! Now just drag all the HEIF/AVIF files into Apple Photos/Google Photos and enjoy amazing photos that takes up very little storage!</p>
+          <h2>2.4 - Conclusion</h2>
+          <p>In this section, I hope I did a fair job detailing basic usage of this tool and accounted for any obstacles you might encounter using it.</p>
+          <p>From now on, all you need to do is open the tool in Jupyter notebook, copy the folder path, and run the code. Should be pretty brainless.</p>
+          <p>If you have any question, feel free to contact me by going to <a href="https://i.hongjunwu.com/contact/">my contact page (Link)</a>.</p>
+      
+        <section class="js-section">
+          <h3 class="section__title">Chapter 3: Advanced Usage</h3>
+          <p>For now, I have limited time and effort, so any advanced usage and how to use other functions of Heiya can be found in the following notebooks.</p>
+          <table id="customers">
+            <tr>
+              <th>Name</th>
+              <th>Link</th>
+            </tr>
+            <tr>
+              <td>Heiya Basic Demo</td>
+              <td><a href="https://github.com/wu-hongjun/heiya/blob/main/heiya_basic_demo.ipynb">https://github.com/wu-hongjun/heiya/blob/main/heiya_basic_demo.ipynb</a></td>
+            </tr>
+            <tr>
+              <td>Heiya Full Demo</td>
+              <td><a href="https://github.com/wu-hongjun/heiya/blob/main/heiya_full_demo.ipynb">https://github.com/wu-hongjun/heiya/blob/main/heiya_full_demo.ipynb</a></td>
+            </tr>
+          </table>
+          <hr />
+        </section>
+
+        <section class="js-section">
+          <h3 class="section__title">Chapter 4: Heiya Functions</h3>
+          <p>This chapter will be the home to document all the functions available to call independently so you can build your own pipeline.</p>
+          <p>It is work in progress, and most information you are looking for can be found in the <strong>Advanced Usage</strong> section above.</p>
+          <hr />
+        </section>
+        
+        <section class="js-section">
+          <h3 class="section__title">Chapter 5: To-Do</h3>
+          <p>Some potential improvements that can be done include:</p>
+          <li>
+            Currently Heiya only supports converting to 8-bit (Which is mostly enough, since JPG can do at most 8 bit). 
+            However, enabling Conversion to 10bit(HEIF) or 12bit(AVIF) is a welcomed improvement.
+          </li>
+          <li>
+            One potential solution to enable higher bitrate is to deprecate <code>pillow_heif</code> and instead rewrite the entire tool using <code>imagemagick</code>. 
+            Although I shall note that if you have a camera that already shoots HEIF, you probably don't need this tool.
+          </li>
+          <li>
+            Some additional video encoding capabilities is under active development by wrapping <code>ffmpeg</code>.
+          </li>
+          <li>
+            Of course, a Heiya GUI would be nice.
+          </li>
+          <li>
+            An automatic deployment of the tool might be a welcomed addition too.
+          </li>
+          <hr />
+        </section>
+
+        <section class="js-section">
+          <h3 class="section__title">Chapter 6: License</h3>
+          <p>Heiya is distributed in the license in <a href="https://github.com/wu-hongjun/heiya/blob/main/LICENSE.txt">LICENSE.txt</a>.</p>
+          <hr />
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">Copyright <a href="https://hongjunwu.com" target="_blank" class="link link--light">Hongjun Wu</a>, all rights reserved, 2022.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>hljs.highlightAll();</script>
+
+    <script src="scribbler.js"></script>
+  </body>
+</html>

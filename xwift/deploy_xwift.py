@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Info about this version of installer.
 VERSION = "1.0.0"
-BUILD = "20221203"
+BUILD = "20230101"
 NEW = "Universal Xwift deploy class."
 
 logging.basicConfig(level=logging.WARNING)

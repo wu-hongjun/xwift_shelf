@@ -1,4 +1,6 @@
-# Modified using work from: https://bindpose.com/scripting-custom-shelf-in-maya-python/
+# Credit:
+# Inspired by work from: https://bindpose.com/scripting-custom-shelf-in-maya-python/
+
 import importlib
 import maya.cmds as cmds
 import reload_util
@@ -79,15 +81,13 @@ class _shelf():
 class xwiftshelf(_shelf):
     """
     The Xwift Shelf
-    Note: When pass a command we are not using the brackets after the name (), because that would call the command
-    instead of passing it.
     """
 
     def build(self):
         # Refresh the Xwift reload script
         importlib.reload(reload_util)
 
-        # Xwift Animation Tools
+        # Example of a button with sub-menus.
         self.add_button(label="Animation Tools",
                         noLabel=True,
                         icon="xwift/xwift_animation_tools.png",
@@ -108,6 +108,7 @@ class xwiftshelf(_shelf):
                            command="import xwift_about; xwift_about.test()")
 
         # Asset Manager
+        # Example of a button that calls a script in a package.
         self.add_button(label="AssLib",
                         noLabel=True,
                         icon="xwift/xwift_iteration_tools.png",
