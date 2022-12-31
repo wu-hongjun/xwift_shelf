@@ -1,8 +1,7 @@
 # Plug-Ins
-You can put your plug-ins in this directory for them to be automatically loaded.
+You can put your plug-ins (.mll or .bundle) in this directory for them to be automatically loaded.
  
-Things that can live here for example is:
-AnimSchoolPicker.mll  (For Win)
-AnimSchoolPicker.bundle  (For macOS)
-CharcoalEditor2.mll
-CharcoalEditor2.bundle
+Examples of things that can live here:
+* AnimSchoolPicker.mll
+* CharcoalEditor2.mll
+

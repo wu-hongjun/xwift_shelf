@@ -1,8 +1,6 @@
 # Modified using work from: https://bindpose.com/scripting-custom-shelf-in-maya-python/
 import importlib
 import maya.cmds as cmds
-
-import xwift_about
 import reload_util
 
 
@@ -100,14 +98,14 @@ class xwiftshelf(_shelf):
         playblast_pro_windows = self.add_sub_menu(p, "Foo1")
         vp2_avi = self.add_sub_menu(playblast_pro_windows, "Foo1")
         self.add_menu_item(vp2_avi, label="Bar1",
-                           command=xwift_about.test)
+                           command="import xwift_about; xwift_about.test()")
         self.add_menu_item(vp2_avi, label="Bar2",
-                           command=xwift_about.test)
+                           command="import xwift_about; xwift_about.test()")
         vp2_mp4 = self.add_sub_menu(playblast_pro_windows, "Foo2")
         self.add_menu_item(vp2_mp4, label="Bar1",
-                           command=xwift_about.test)
+                           command="import xwift_about; xwift_about.test()")
         self.add_menu_item(vp2_mp4, label="Bar2",
-                           command=xwift_about.test)
+                           command="import xwift_about; xwift_about.test()")
 
         # Asset Manager
         self.add_button(label="AssLib",
@@ -120,7 +118,7 @@ class xwiftshelf(_shelf):
         self.add_button(label="About",
                         noLabel=True,
                         icon="xwift/xwift_about.png",
-                        command=xwift_about.about,
+                        command="import xwift_about; xwift_about.about()",
                         btn_annotation="About the current version of xwift.")
 
 
