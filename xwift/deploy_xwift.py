@@ -76,7 +76,6 @@ class DeployBase(object):
     maya_script_dir = None
     maya_script_cache_dir = None
     maya_plugin_dir = None
-    ffmpeg_dir = None
 
     xwift_dir = None
     xwift_shelf_dir = None
@@ -140,7 +139,6 @@ class DeployBase(object):
             self.maya_script_dir = "{0}{1}/scripts/xwift".format(self.maya_dir, self.maya_version)
             self.maya_script_cache_dir = "{0}{1}/scripts/__pycache__".format(self.maya_dir, self.maya_version)
             self.maya_plugin_dir = "{0}{1}/plug-ins/".format(self.maya_dir, self.maya_version)
-            self.ffmpeg_dir = "{0}{1}/ffmpeg/".format(self.maya_dir, self.maya_version).replace("/", "\\")
 
     def install_user_setup(self):
         """
@@ -169,7 +167,6 @@ class DeployBase(object):
                 copy_and_overwrite(self.xwift_dir + "\\scripts", self.maya_script_dir)
                 copy_and_overwrite(self.xwift_dir + "\\plug-ins", self.maya_plugin_dir)
                 copy_and_overwrite(self.xwift_dir + "\\icons", self.xwift_icon_dir)
-                copy_and_overwrite(self.xwift_dir + "\\ffmpeg", self.ffmpeg_dir)
                 logging.info("Successfully installed all components of Xwift.")
             except Exception as err:
                 logging.error("Installation aborted with error: " + err)
@@ -237,7 +234,6 @@ class DeployMacOS(DeployBase):
             self.maya_script_cache_dir = "{0}{1}/zh_CN/scripts/__pycache__".format(self.maya_dir, self.maya_version)
             self.maya_plugin_dir = "{0}{1}/zh_CN/plug-ins/".format(self.maya_dir, self.maya_version)
             self.xwift_icon_dir = "{0}{1}/zh_CN/prefs/icons/xwift/".format(self.maya_dir, self.maya_version)
-            self.ffmpeg_dir = "{0}{1}/zh_CN/ffmpeg/".format(self.maya_dir, self.maya_version)
 
     def install_pymel(self):
         """

@@ -2,9 +2,8 @@ import pprint
 
 from maya import cmds
 
-import asset_library
-from Qt import QtWidgets, QtCore, QtGui
-# from PySide2 import QtWidgets, QtCore, QtGui
+import asset_lib.asset_library as asset_library
+from PySide2 import QtWidgets, QtCore, QtGui
 
 
 class AssetLibraryUI(QtWidgets.QDialog):
@@ -18,7 +17,7 @@ class AssetLibraryUI(QtWidgets.QDialog):
         self.setWindowTitle("Asset Library UI")
 
         # The library variable points to an instance of our controller library
-        self.library = asset_library.asset_library.AssetLibrary()
+        self.library = asset_library.AssetLibrary()
 
         # Every time we create a new instance, we will automatically build the ui and populate it.
         self.build_ui()

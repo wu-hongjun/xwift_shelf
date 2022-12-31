@@ -120,7 +120,7 @@ def reinstall_scripts_from_repo(repository_path):
     Returns:
 
     """
-    install_script_path = repository_path + "deploy_xwift.py"
+    install_script_path = os.path.join(repository_path, "deploy_xwift.py")
     spec = spec_from_file_location("deploy_xwift", install_script_path)
 
     # creates a new module based on spec

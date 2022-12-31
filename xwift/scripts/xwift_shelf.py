@@ -109,12 +109,11 @@ class xwiftshelf(_shelf):
         self.add_menu_item(vp2_mp4, label="Bar2",
                            command=xwift_about.test)
 
-        from con_library import library_ui
         # Asset Manager
         self.add_button(label="AssLib",
                         noLabel=True,
                         icon="xwift/xwift_iteration_tools.png",
-                        command=library_ui.showUI,
+                        command="from asset_lib import library_ui; ui = library_ui.showUI()",
                         btn_annotation="An asset library to manage reusable controllers and objects.")
 
         # About Xwift

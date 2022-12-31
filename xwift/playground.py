@@ -5,13 +5,13 @@ import reload_util
 #     """Used to get REPO_PATH. Only run this in PyCharm outside of Maya. """
 #     import os
 #     print(os.path.abspath(os.getcwd()).replace("\\", "/"))
-# get_repo_path()  
+# get_repo_path()
 
-REPO_PATH = ""  # e.g. "C:/Users/hongj/PycharmProjects/Xwift/xwift/"
+REPO_PATH = "C:/Users/hongj/PycharmProjects/xwift_shelf/xwift"  # e.g. "C:/Users/hongj/PycharmProjects/Xwift/xwift/"
 reload_util.reload_from_playground(REPO_PATH)
 
 
 # =============== Run your code below =============
-from con_library import library_ui
+from asset_lib import library_ui
 
 ui = library_ui.showUI()
