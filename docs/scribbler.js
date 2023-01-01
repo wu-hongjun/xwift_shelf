@@ -12,10 +12,7 @@ var getAll = function (selector, scope) {
 // setup typewriter effect in the terminal demo
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
-  var txt = `
-  
-            import reload_util
-            reload_util.reload_from_playground(REPO_PATH) 
+  var txt = `import reload_util; reload_util.reload_from_playground(REPO_PATH) 
             
             # =============== Run your code below =============
             from asset_lib import library_ui

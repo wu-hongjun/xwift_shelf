@@ -1,10 +1,10 @@
 /* css variables*/
 :root {
-  --primary-color: #432E30;
-  --primary-color-light: #8E7474;
-  --accent-color: #FE6A6B;
-  --accent-color-light: #FFE4E4;
-  --accent-color-dark: #B94B4C;
+  --primary-color: #30432e;
+  --primary-color-light: #748e74;
+  --accent-color: #91d977;
+  --accent-color-light: #cdfa95;
+  --accent-color-dark: #4bb951;
   --white-color: #FAFBFC;
   --light-gray-color: #C6CBD1;
   --medium-gray-color: #959DA5;
