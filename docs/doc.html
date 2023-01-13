@@ -180,21 +180,57 @@
           <p>
             Note: This looks long because is a babysit tutorial that covers in great detail. Once you get it, it is brainless to run.
           </p>
-          <h2>2.1 - Open Jupyter Notebook</h2>
+          <h2>2.1 - Gather Resources</h2>
           <p>
-            First, open Anaconda Navigator App on your computer (Assuming you already have it installed), and open "Jupyter Notebook" inside the app.
-            If you did not do the optional stuff, I assume you know what you are doing and just open a Jupyter Notebook page.
+            Before everything, let's install some prerequisites. I will show you how to install PyCharm and Mayacharm.
           </p>
           <p>
-            A webpage should open. 
-            Navigate to a place where you want to save this tool, and click "New - Notebook Python 3" on the top right of the Jupyter Notebook web page.  
+            To install PyCharm, simply head over to the <a href="https://www.jetbrains.com/pycharm/download/">Pycharm Official Website</a>
+            and download the Pycharm Community version.
+            You can of course use PyCharm Professional, but as a PyCharm Professional user myself,
+            I can say it does not add any benefit to Maya development except maybe you have some money to throw into the water.
+            Just use the PyCharm Community.
           </p>
-          <img src="./img/make_new_jupyter_notebook.png" width="100%" height="100%">
+          <img src="./img/pycharm_download.png" width="100%" height="100%">
           <p>
-            A new webpage that looks something like this should appear. First click "Untitled" to name it to something you like, for example, "jpg_hei".
-            In the below right after "In [  ]: 1" is the place where you can enter some code.
+            Then, head over to <a href="https://plugins.jetbrains.com/plugin/8218-mayacharm/versions">Jetbrains Marketplace for Mayacharm</a> and download the newest version of MayaCharm.
           </p>
-          <img src="./img/new_jupyter_notebook.png" width="100%" height="100%">
+          <img src="./img/mayacharm_download.png" width="100%" height="100%">
+          <p>
+            Install Mayacharm using the official guide, which I provided a screenshot below.
+          </p>
+          <img src="./img/mayacharm_install.png" width="100%" height="100%">
+          <p>
+            Head over to PyCharm, and on the menu bar,
+            <code>File -> Settings</code> and follow the screenshots below to configure where your <code>mayapy.exe</code> is located.
+            If you installed in the default location it is more or less located in somewhere like <code>C:\Program Files\Autodesk\Maya2023\bin\mayapy.exe</code>.
+          </p>
+          <img src="./img/search_interpreter.png" width="100%" height="100%">
+          <img src="./img/add_interpreter.png" width="100%" height="100%">
+          <p>
+            Now, head over to Pycharm menubar <code>File -> Settings -> MayaCharm</code> and configure the active Maya SDK to the <code>mayapy</code> you setup in last step, and port to 4434 as shown below.
+          </p>
+          <img src="./img/mayacharm_settings.png" width="100%" height="100%">
+          <p>To test whether you have your Mayacharm setup well, do the following:</p>
+          <li>Make sure PyCharm and Maya are both open and running.</li>
+          <li>Using Pycharm's toolbar, <code>File -> New -> Python File</code> to make a new script.</li>
+          <li>Copy the code below and paste it into the newly created script, save it, and press <code>Alt+A</code>.</li>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code class="language-python">
+                import maya.cmds as cmds
+
+                # Set MayaCharm Port
+                if not cmds.commandPort(':4434', q=True):
+                &nbsp;   cmds.commandPort(n=':4434')
+
+                # Make a cube!
+                cmds.polyCube()
+              </code>
+            </pre>
+          </div>
+          <p>A new cube will be created in the empty Maya scene. Your Mayacharm is fully set!</p>
+          <img src="./img/new_cube.png" width="100%" height="100%">
           <h2>2.2 - Make the Tool</h2>
           <p>
             Copy all the code and paste them into your newly created notebook. This code is also available on Github in <a href="https://github.com/wu-hongjun/heiya/blob/main/jpg_hei.ipynb">jpg_hei.ipynb (Link)</a>. 
