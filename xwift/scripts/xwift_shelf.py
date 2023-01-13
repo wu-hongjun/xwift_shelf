@@ -88,23 +88,23 @@ class xwiftshelf(_shelf):
         importlib.reload(reload_util)
 
         # Example of a button with sub-menus.
-        self.add_button(label="Animation Tools",
+        self.add_button(label="Sub-menu Example",
                         noLabel=True,
                         icon="xwift/xwift_animation_tools.png",
-                        btn_annotation="Animation Tools")
+                        btn_annotation="Sub-menu Example")
         p = cmds.popupMenu(b=1)
-        self.add_title_item(p, label="Animation Tools")
+        self.add_title_item(p, label="Sub-menu Example")
 
-        playblast_pro_windows = self.add_sub_menu(p, "Foo1")
-        vp2_avi = self.add_sub_menu(playblast_pro_windows, "Foo1")
-        self.add_menu_item(vp2_avi, label="Bar1",
+        sub = self.add_sub_menu(p, "Foo1")
+        foo1 = self.add_sub_menu(sub, "Foo1")
+        self.add_menu_item(foo1, label="Bar1",
                            command="import xwift_about; xwift_about.test()")
-        self.add_menu_item(vp2_avi, label="Bar2",
+        self.add_menu_item(foo1, label="Bar2",
                            command="import xwift_about; xwift_about.test()")
-        vp2_mp4 = self.add_sub_menu(playblast_pro_windows, "Foo2")
-        self.add_menu_item(vp2_mp4, label="Bar1",
+        foo2 = self.add_sub_menu(sub, "Foo2")
+        self.add_menu_item(foo2, label="Bar1",
                            command="import xwift_about; xwift_about.test()")
-        self.add_menu_item(vp2_mp4, label="Bar2",
+        self.add_menu_item(foo2, label="Bar2",
                            command="import xwift_about; xwift_about.test()")
 
         # Asset Manager
