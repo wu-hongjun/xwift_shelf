@@ -64,7 +64,7 @@
               Xwift shelf is not my entire toolkit, as my tools remain private at the moment.
               Instead, it is a good backbone that anyone can build and organize their tools upon, and should make a lot of people very happy.
             </p>
-          <h3>1.1 - What's Xwift Shelf?</h3>
+          <h3>1.1 - What is Xwift Shelf?</h3>
           <p>
             In short, I am providing you with three things:
             <li>A flexible and comprehensive Maya shelf system written in Python 3.</li>
@@ -90,7 +90,7 @@
               <li>Script Editor does not give you a clear idea of file hierarchy of your project.</li>
               <li>Code developed in the script editor is usually not version controlled, and you need to manually copy and push to Git repository.</li>
             </p>
-          <h3>1.3 The (Slightly) Better Way</h3>
+          <h3>1.3 The (Slightly) Better Workflow</h3>
             <p>
               I can go on and on, and the idea is it is just not a good idea to develop in the Script Editor.
               In fact, based on my industry experience, people don't do this as well,
@@ -240,10 +240,41 @@
           </div>
           <p>A new cube will be created in the empty Maya scene. Your Mayacharm is fully set!</p>
           <img src="./img/new_cube.png" width="100%" height="100%">
-          <h2>2.2 - Make the Tool</h2>
+          <h2>2.2 - Setup Xwift Shelf</h2>
           <p>
-            Copy all the code and paste them into your newly created notebook. This code is also available on Github in <a href="https://github.com/wu-hongjun/heiya/blob/main/jpg_hei.ipynb">jpg_hei.ipynb (Link)</a>. 
+            In this section, I will go through how to setup your repository to deploy with Xwift Shelf.
+            Git is not required, all I am showing you is you can store your codebase somewhere else than MAYA_SCRIPT_PATH.
           </p>
+          <p>
+            That said, I recommend you organize your code using Github, it is free and easy to use, and literally everyone uses it.
+          </p>
+          <p>
+            First, create a repository of where you want to store your code.
+            I will use the name "Bananakit" as example.
+            I recommend doing this with from the Github website,
+          </p>
+          <p>If you get stuck, read this:</p>
+          <li>
+            <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">Github Quick Start: Create a Repo</a>
+          </li>
+          <p>
+            After that, open your PyCharm, and on the menu bar, <code>Git -> Clone -> Github</code> and clone your newly created repository.
+            Note that the repository probably only have very minimal things, and is mostly empty.
+          </p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code class="language-python">
+                \bananakit
+                ----\.git
+                ----.gitattributes
+              </code>
+            </pre>
+          </div>
+          <p>
+            Then, go to <a href="https://xwift.hongjunwu.com/">xwift.hongjunwu.com</a> and download the latest version of Xwift Shelf.
+            Unzip the file and drag the "xwift" folder into your newly created repository. That is,
+          </p>
+
           <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code class="language-python">
