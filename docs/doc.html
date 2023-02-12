@@ -278,132 +278,18 @@
           <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code class="language-python">
-                """
-                JPG to HEIF/AVIF
-                Convert JPG shoot by camera to High Efficiency Images with metadata to import to iCloud photo library.
-
-                import heiya
-                import pyperclip as clip
-
-                # Custom file path override, usually just leave it blank if you use pyperclip
-                source_dir = ""
-
-                # Get the image location directly from the clipboard
-                if source_dir == "":
-                    source_dir = clip.paste()
-                    
-                # This will convert all the JPG in source_dir to HEI.
-                # source_format = 0 -> JPG. (You don't need to change this for most of the time, you can also set to 1 for PNG.)
-                # target_format = 0 -> AVIF (For smaller file size but less compatible, requires iOS 16/macOS Ventura or higher).
-                # target_format = 1 -> HEIF (For best compatibility but slightly larger file size, requires additional extension to open on Windows).
-                heiya.to_hei.convert_image_in_dir_to_hei(source_dir, source_format=0, target_format=1)
+                \bananakit
+                ----\.git
+                ----.gitattributes
+                ----\xwift
+                
               </code>
             </pre>
           </div>
-          <p>Your notebook should already be saved, if not, do a quick "File - Save As" on the Notebook tool bar to make sure your notebook is created.</p>
           <h2>2.3 - Run the Code</h2>
-          <p>Now, use Finder(macOS)/File Explorer(Windows) to go to the place where you store all of the JPGs you desire to convert.</p>
-          
-          <h3>2.3.1 - Copy the directory address.</h3>
-          <p>Copy the directory address to your clipboard.</p>
-          <li>
-            Windows: File Explorer -> Go to your target folder -> Single Click address bar -> Copy the file path in address bar.
-          </li>
-          <li>
-            macOS: Finder -> Go to your target folder -> Hold Alt (File path should apper in bottom left) -> Right click on folder and copy file path.
-          </li>
-          <p>
-            At this point, you might have something similar to this example stored in your clipboard. 
-            This is a SD card from a Fujifilm camera, your address might vary depending on where your photos are.
-          </p>
-          <div class="code__block code__block--notabs">
-            <pre class="code code--block">
-              <code>
-                D:\DCIM\207_FUJI  (Windows)
-                /Volumes/SDXC/DCIM/207_FUJI  (macOS)
-              </code>
-            </pre>
-          </div>
+          <p>To be continued...</p>
 
-          <p>Now, you can do one of two things:</p>
-          <li>
-            If you just want to use the directory in your clipboard, do nothing.
-          </li>
-          <li>
-            If you wish to enter a custom path, paste the address into <code>source_dir</code>.
-          </li>
-          
-          <h3>2.3.2 -  Run the code.</h3>
-          <p>Make sure to select the cell by single clicking the code.</p>
-          <p>Navigate to your tool bar, and "Cells - Run Cells" to run the newly copied code. </p>
-          <p>Additionally, you can use <strong>Shift + Enter</strong> on your keyboard to make this operation faster.</p>
-          <p>Heiya should automatically start to convert the JPGs, and will print the progress down below.</p>
-          <img src="./img/pyperclip_convert_finished.png" width="100%" height="100%">
-          <p>Horray! Now just drag all the HEIF/AVIF files into Apple Photos/Google Photos and enjoy amazing photos that takes up very little storage!</p>
-          <h2>2.4 - Conclusion</h2>
-          <p>In this section, I hope I did a fair job detailing basic usage of this tool and accounted for any obstacles you might encounter using it.</p>
-          <p>From now on, all you need to do is open the tool in Jupyter notebook, copy the folder path, and run the code. Should be pretty brainless.</p>
-          <p>If you have any question, feel free to contact me by going to <a href="https://i.hongjunwu.com/contact/">my contact page (Link)</a>.</p>
-      
-        <section class="js-section">
-          <h3 class="section__title">Chapter 3: Advanced Usage</h3>
-          <p>For now, I have limited time and effort, so any advanced usage and how to use other functions of Heiya can be found in the following notebooks.</p>
-          <table id="customers">
-            <tr>
-              <th>Name</th>
-              <th>Link</th>
-            </tr>
-            <tr>
-              <td>Heiya Basic Demo</td>
-              <td><a href="https://github.com/wu-hongjun/heiya/blob/main/heiya_basic_demo.ipynb">https://github.com/wu-hongjun/heiya/blob/main/heiya_basic_demo.ipynb</a></td>
-            </tr>
-            <tr>
-              <td>Heiya Full Demo</td>
-              <td><a href="https://github.com/wu-hongjun/heiya/blob/main/heiya_full_demo.ipynb">https://github.com/wu-hongjun/heiya/blob/main/heiya_full_demo.ipynb</a></td>
-            </tr>
-          </table>
-          <hr />
-        </section>
-
-        <section class="js-section">
-          <h3 class="section__title">Chapter 4: Heiya Functions</h3>
-          <p>This chapter will be the home to document all the functions available to call independently so you can build your own pipeline.</p>
-          <p>It is work in progress, and most information you are looking for can be found in the <strong>Advanced Usage</strong> section above.</p>
-          <hr />
-        </section>
-        
-        <section class="js-section">
-          <h3 class="section__title">Chapter 5: To-Do</h3>
-          <p>Some potential improvements that can be done include:</p>
-          <li>
-            Currently Heiya only supports converting to 8-bit (Which is mostly enough, since JPG can do at most 8 bit). 
-            However, enabling Conversion to 10bit(HEIF) or 12bit(AVIF) is a welcomed improvement.
-          </li>
-          <li>
-            One potential solution to enable higher bitrate is to deprecate <code>pillow_heif</code> and instead rewrite the entire tool using <code>imagemagick</code>. 
-            Although I shall note that if you have a camera that already shoots HEIF, you probably don't need this tool.
-          </li>
-          <li>
-            Some additional video encoding capabilities is under active development by wrapping <code>ffmpeg</code>.
-          </li>
-          <li>
-            Of course, a Heiya GUI would be nice.
-          </li>
-          <li>
-            An automatic deployment of the tool might be a welcomed addition too.
-          </li>
-          <hr />
-        </section>
-
-        <section class="js-section">
-          <h3 class="section__title">Chapter 6: License</h3>
-          <p>Heiya is distributed in the license in <a href="https://github.com/wu-hongjun/heiya/blob/main/LICENSE.txt">LICENSE.txt</a>.</p>
-          <hr />
-        </section>
-      </article>
-    </div>
-
-    <footer class="footer">Copyright <a href="https://hongjunwu.com" target="_blank" class="link link--light">Hongjun Wu</a>, all rights reserved, 2022.</footer>
+    <footer class="footer">Copyright <a href="https://hongjunwu.com" target="_blank" class="link link--light">Hongjun Wu</a>, all rights reserved, 2023.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
